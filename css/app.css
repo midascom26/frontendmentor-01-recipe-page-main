@@ -1,0 +1,252 @@
+/*--------------------- Custom Properties ---------------------- */
+:root {
+    --primaryNutmeg: hsl(14, 45%, 36%);
+    --primaryDarkRaspberry: hsl(332, 51%, 32%);
+
+    --neutralWhite: hsl(0, 0%, 100%);
+    --neutralRoseWhite: hsl(330, 100%, 98%);
+    --neutralEggshell: hsl(30, 54%, 90%);
+    --neutralLightGrey: hsl(30, 18%, 87%);
+    --neutralWengeBrown: hsl(30, 10%, 34%);
+    --neutralDarkCharcoal: hsl(24, 5%, 18%);
+}
+
+/*------------------------------ globales -----------------------*/
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 2.5rem 0;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+h1 {
+    color: var(--neutralDarkCharcoal);
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: left;
+}
+
+h2 {
+    color: var(--primaryNutmeg);
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-family: "Outfit", sans-serif;
+    color: var(--primaryDarkRaspberry);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-family: "Outfit", sans-serif;
+    color: var(--neutralWengeBrown);
+    line-height: 1.4;
+    margin: 0 0 2.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+/*----section y header ----- */
+
+section {
+    width: 85%;
+    margin: 3rem auto 3rem auto;
+    color: var(--neutralWengeBrown);
+    border-bottom: 1px solid var(--neutralLightGrey);
+    padding-bottom: 1.5rem;
+}
+
+section:last-of-type {
+    border-bottom: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.header-preparacion ul,
+section ul {
+    padding: 0 0 0 2.5rem;
+    margin: 0
+}
+
+.header-preparacion ul li,
+section ul li {
+    padding: 0 1.5rem 1rem 1.5rem;
+    font-family: "Outfit", sans-serif;
+    color: var(--neutralWengeBrown);
+    line-height: 1.4;
+}
+
+.header-preparacion li span,
+section li span {
+    font-weight: 700;
+}
+
+/*---- header -----*/
+
+.header-contenedor {
+    width: 85%;
+    margin: 3rem auto 0 auto;
+}
+
+.header-preparacion {
+    background-color: var(--neutralRoseWhite);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.header-preparacion li:last-of-type {
+    padding-bottom: 0;
+}
+
+/*---- section .instrucciones ----*/
+
+.instrucciones ol {
+    padding: 0 0 0 2.5rem;
+    margin: 0
+}
+
+.instrucciones ol li {
+    padding: 0 1.5rem 1rem 1.5rem;
+    font-family: "Outfit", sans-serif;
+    line-height: 1.4;
+}
+
+.instrucciones li::marker {
+    color: var(--primaryNutmeg);
+    font-weight: 700;
+}
+
+/*---- section .nutrientes -----*/
+
+.nutrientes table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutrientes tr {
+    font-family: "Outfit", sans-serif;
+    border-bottom: 1px solid var(--neutralLightGrey);
+}
+
+.nutrientes tr:last-of-type {
+    border-bottom: none;
+    padding: 0;
+}
+
+.nutrientes .descripcion {
+    padding: 1rem 0 1rem 3rem;
+    width: 50%;
+}
+
+.nutrientes .cantidad {
+    color: var(--primaryNutmeg);
+    font-weight: 700;
+    width: 50%;
+    padding: 1rem 0 1rem 1rem;
+}
+
+/*---- footer ----*/
+
+footer {
+    font-family: "Outfit", sans-serif;
+
+    .attribution {
+        font-size: 13px;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+/* --------------------- >= 768px -------------------- */
+@media (min-width: 768px) {
+
+    .body {
+        max-width: 90rem;
+        margin: 10rem auto 0 auto;
+        background-color: var(--neutralEggshell);
+    }
+
+    header img {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto;
+        box-shadow: 10px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    section {
+        border-bottom: 2px solid black;
+    }
+}
+
+/* --------------------- >= 1440px -------------------- */
+
+@media (min-width: 1440px) {
+
+    .body {
+        max-width: 80rem;
+        margin: 15rem auto;
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .contenedor-principal {
+        background-color: var(--neutralWhite);
+        border-radius: 3rem;
+    }
+
+    header {
+        margin-top: 10rem;
+    }
+
+    header img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        padding: 4rem;
+        border-radius: 7rem;
+        box-shadow: none;
+    }
+
+    .header-contenedor {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    section {
+        border-bottom: 1px solid var(--neutralLightGrey);
+    }
+}
+
+
+
